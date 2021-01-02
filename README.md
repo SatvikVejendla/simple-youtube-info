@@ -79,9 +79,9 @@ viewCount | Highest views
 ### Channel
 
 ```javascript
-youtube.channel(keyword);
-youtube.channel(keyword, maxResults);
-youtube.channel(keyword, maxResults, order);
+youtube.channel(keyword).then(result => console.log(result));
+youtube.channel(keyword, maxResults).then(result => console.log(result));
+youtube.channel(keyword, maxResults, order).then(result => console.log(result));
 ```
 
 The parameters are all the same as the video command with the exception of one. For channel, you can also choose to sort the order by videoCount, meaning that whichever channel has the most videos comes up first.
@@ -95,9 +95,45 @@ youtube.channel(keyword, maxResults, "videoCount");
 ### Playlist
 
 ```javascript
-youtube.channel(keyword);
-youtube.channel(keyword, maxResults);
-youtube.channel(keyword, maxResults, order);
+youtube.channel(keyword).then(result => console.log(result));
+youtube.channel(keyword, maxResults).then(result => console.log(result));
+youtube.channel(keyword, maxResults, order).then(result => console.log(result));
 ```
 
 The parameters are the same as the video.
+
+
+
+# Results
+
+When you do one of these command, the results are a JSON table in this sort of format:
+
+```
+{
+  kind: 'youtube#searchListResponse', 
+  etag: 'blzG7xhOTv83HKGiQVjsBuEmAe8',
+  nextPageToken: 'CAoQAA',
+  regionCode: 'US',
+  pageInfo: { totalResults: 56243, resultsPerPage: 2 },
+  items: [
+    {
+      kind: 'youtube#searchResult',
+      etag: 'yKvgyRkAANTBfDzrjboZJq2IP_w',
+      id: [Object]
+    },
+    {
+      kind: 'youtube#searchResult',
+      etag: 'BdUnFOoBVL3RsuUtUmX3P6Ot-n8',
+      id: [Object]
+    },
+  ]
+}
+```
+
+You can just normally access any of these elements as if it were a regular JSON object.
+
+For example:
+
+```javascript
+const id = result.items[0].id.channelId;
+```
