@@ -1,0 +1,33 @@
+{
+  "name": "simple-youtube-info",
+  "version": "1.5.5",
+  "description": "A simple node js module which makes it easier to search youtube using the Youtube API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SatvikVejendla/simple-youtube-info.git"
+  },
+  "keywords": [
+    "youtube",
+    "search",
+    "video",
+    "playlist",
+    "channel",
+    "simple",
+    "info",
+    "api",
+    "google"
+  ],
+  "author": "SatvikVejendla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SatvikVejendla/simple-youtube-info/issues"
+  },
+  "homepage": "https://github.com/SatvikVejendla/simple-youtube-info#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
