@@ -137,3 +137,4 @@ For example:
 ```javascript
 const id = result.items[0].id.channelId;
 ```
+ would result in giving the id of the first result when you search youtube.
