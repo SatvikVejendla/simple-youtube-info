@@ -75,3 +75,29 @@ rating | Highest to lowest rating
 relevance | Relevance to the search keyword
 title | Alphabetically
 viewCount | Highest views
+
+### Channel
+
+```javascript
+youtube.channel(keyword);
+youtube.channel(keyword, maxResults);
+youtube.channel(keyword, maxResults, order);
+```
+
+The parameters are all the same as the video command with the exception of one. For channel, you can also choose to sort the order by videoCount, meaning that whichever channel has the most videos comes up first.
+
+To do this, just write "videoCount" instead of order:
+
+```javascript
+youtube.channel(keyword, maxResults, "videoCount");
+```
+
+### Playlist
+
+```javascript
+youtube.channel(keyword);
+youtube.channel(keyword, maxResults);
+youtube.channel(keyword, maxResults, order);
+```
+
+The parameters are the same as the video.
