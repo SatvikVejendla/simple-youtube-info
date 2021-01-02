@@ -69,6 +69,7 @@ order | how you the results are ordered. "date", "rating", "relevance", "title",
 
 
 Type of order | Description
+------------- | -----------
 date | Sorted by whicever video is newest
 rating | Highest to lowest rating
 relevance | Relevance to the search keyword
